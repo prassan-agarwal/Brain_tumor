@@ -53,6 +53,29 @@ By default, the notebook reads from:
 
 If your dataset is elsewhere, update `dataset_root` in the notebook.
 
+## Create a brand-new repo (no merge with this repo)
+
+If you want a separate repository with the current files and **no link/merge history** back to this one:
+
+```bash
+bash scripts/create_standalone_repo.sh ../Brain_tumor_standalone
+```
+
+This will:
+
+1. Copy project files to a new folder.
+2. Remove any copied `.git` metadata.
+3. Initialize a fresh Git repository there.
+4. Create an initial commit (`Initial standalone import from Brain_tumor`).
+
+You can then add a new remote in the standalone folder and push it as an independent repo:
+
+```bash
+cd ../Brain_tumor_standalone
+git remote add origin <your-new-repo-url>
+git push -u origin main
+```
+
 ## Notes
 
 This project is for educational/research use and not for clinical decision-making.
