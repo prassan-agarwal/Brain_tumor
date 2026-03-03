@@ -1,0 +1,22 @@
+# Ignore heavy pre-trained keras weights (due to 100MB GitHub limit)
+*.keras
+*.h5
+
+# Ignore generated anomaly threshold (will be regenerated locally)
+anomaly_threshold.txt
+
+# Local TensorFlow virtual environments
+tf_env/
+venv/
+.env/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
